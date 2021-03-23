@@ -1,8 +1,5 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
     <div id="map" class="map"></div>
-  </div>
 </template>
 
 <script lang="ts">
@@ -15,7 +12,7 @@ import { ChallengeService } from "../services/challengeService";
     msg: String,
   },
 })
-export default class HelloWorld extends Vue {
+export default class Map extends Vue {
   msg!: string;
   /**
    *
@@ -30,11 +27,6 @@ export default class HelloWorld extends Vue {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-.map {
-  height: 800px;
-  width: 1vv;
-}
+<style lang="scss">
+  @import "https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css";
 </style>

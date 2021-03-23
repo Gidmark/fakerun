@@ -1,30 +1,29 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="app">
+    <div class="app__nav nav">
+      <router-link to="/" class="nav__link">Home</router-link>
+      <router-link to="/about" class="nav__link">About</router-link>
+    </div>
+    <div class="app__map">
+      <Map />
+    </div>
+    <div class="app__content">
+      <router-view />
+    </div>
   </div>
-  <router-view/>
 </template>
+<script lang="ts">
+import { Options, Vue } from "vue-class-component"
+import Map from "@/components/Map.vue"
+
+@Options({
+  components: {
+    Map
+  }
+})
+export default class App extends Vue {}
+</script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+  @import "@/assets/ui/scss/main.scss";
 </style>

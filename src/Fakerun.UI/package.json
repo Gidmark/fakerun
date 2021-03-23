@@ -13,6 +13,7 @@
   "dependencies": {
     "@turf/bearing": "~6.3.0",
     "axios": "~0.21.1",
+    "bootstrap": "^5.0.0-beta3",
     "core-js": "~3.9.1",
     "ol": "~6.5.0",
     "vue": "~3.0.0",

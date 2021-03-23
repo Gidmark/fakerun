@@ -1,0 +1,11 @@
+@import "../variables";
+
+.map {
+    height: 100vh;
+
+    .ol-attribution {
+        background: $background-color;
+        bottom: auto;
+        top: 0;
+    }
+}
